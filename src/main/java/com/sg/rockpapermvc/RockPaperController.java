@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -15,8 +16,7 @@ public class RockPaperController {
     public static int totalPoints;
     public static String response;
 
-    @RequestMapping(value = "/rockPaper",
-            method = RequestMethod.POST)
+    @PostMapping(value = "/rockPaper")
     public String rockPaper(HttpServletRequest request,
             Map<String, Object> model) {
 
